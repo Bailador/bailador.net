@@ -1,0 +1,11 @@
+#applications {
+    float: right;
+    width: 50%;
+    border: solid;
+    border-color: $base_color;
+
+    h2 {
+        color: $base_color;
+        text-align: center;
+    }
+}
