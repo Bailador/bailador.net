@@ -1,13 +1,6 @@
-#body {
-   padding: 0px;
-   margin: 0px;
-}
-h1 {
-}
-
 footer {
     position: absolute;
-    background-color: grey;
+    background-color: $base_color;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -17,8 +10,8 @@ footer {
 #github-link {
     margin-top: 6px;
     text-align: center;
-}
 
-#github-link img {
-    width: 40px;
+    img {
+        width: 40px;
+    }
 }
