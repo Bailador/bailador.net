@@ -1,8 +1,13 @@
+body {
+    background-color: #F0FFFF;
+}
+
 #body {
     font-family: Calibri;
     margin-left: 15%;
     margin-right: 15%;
     width: 70%;
+    position: absolute;
     margin-top: $header_height;
     margin-bottom: $footer_height;
 }
