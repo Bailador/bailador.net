@@ -1,4 +1,4 @@
-The source code of the website of Bailador that currently lives here: http://bailador.szabgab.com/
+The source code of the website of Bailador that currently lives here: http://bailador.net/
 
 ## Build the css
 
