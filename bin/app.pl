@@ -14,12 +14,11 @@ if $root.IO.basename eq 'bin' {
 }
 my $files = Bailador::Route::StaticFile.new: directory => $root, path => /.*/;
 
-get '/' => sub () {
+get '/documentation' => sub () {
     my $raw-md = "$root/../Bailador/README.md".IO.slurp: :close;
     my $md = Text::Markdown.new($raw-md);
     my $code = $md.render;
-    #return $code;
-    return template("index.html", {
+    return template("documentation.html", {
         code => $code,
     });
 };
