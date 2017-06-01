@@ -2,6 +2,7 @@ use v6;
 use Bailador;
 use JSON::Fast;
 use Bailador::Route::StaticFile;
+use Text::Markdown;
 
 #my $files = Bailador::Route::StaticFile.new: directory => $dir, path => '/html/:file';
 #add_route: $files;
@@ -12,6 +13,16 @@ if $root.IO.basename eq 'bin' {
     $root = $root.IO.dirname;
 }
 my $files = Bailador::Route::StaticFile.new: directory => $root, path => /.*/;
+
+get '/' => sub () {
+    my $raw-md = "$root/../Bailador/README.md".IO.slurp: :close;
+    my $md = Text::Markdown.new($raw-md);
+    my $code = $md.render;
+    #return $code;
+    return template("index.html", {
+        code => $code,
+    });
+};
 
 get '/(.*)' => sub ($url) {
     #return $root;
