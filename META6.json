@@ -1,0 +1,19 @@
+{
+    "name"        : "bailador.net",
+    "version"     : "*",
+    "perl"        : "6.c",
+    "description" : "The bailador.net website",
+    "depends"     : [ "Bailador", "JSON::Fast" ],
+    "tags"        : [ "Web", "HTTP", "Net" ],
+    "license"     : "MIT",
+    "provides" : {
+    },
+    "authors" : [
+        "Gabor Szabo"
+    ],
+    "support" : {
+        "bugtracker" : "https://github.com/Bailador/bailador.net/issues",
+        "source" : "git://github.com/Bailador/bailador.net.git"
+    },
+    "source-url"  : "git://github.com/Bailador/bailador.net.git"
+}
