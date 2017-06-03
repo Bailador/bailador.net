@@ -1,14 +1,10 @@
 use v6;
 use Bailador;
 use JSON::Fast;
-use Bailador::Route::StaticFile;
 use Text::Markdown;
 
-# this is planned to be a bit more generic than needed here
 my $root = $*PROGRAM.absolute.IO.dirname;
-if $root.IO.basename eq 'bin' {
-    $root = $root.IO.dirname;
-}
+$root = $root.IO.dirname;
 
 get '/documentation' => sub () {
     my $raw-md = "$root/../Bailador/README.md".IO.slurp: :close;
@@ -19,18 +15,8 @@ get '/documentation' => sub () {
     });
 };
 
-get '/(.*)' => sub ($url) {
-    my $file  = ($url eq '' ?? 'index' !! $url) ~ '.html';
-    my $path = $root.IO.child('views').child($file).Str;
-    if $path.IO.e {
-        return template($file)
-    }
-
-    return False;
-}
-
-my $files = Bailador::Route::StaticFile.new: directory => $root.IO.child('public'), path => /(.*)/;
-app.add_route: $files;
+use lib 'lib';
+require BailadorGradual;
 
 baile();
 
