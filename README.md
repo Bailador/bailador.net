@@ -8,7 +8,7 @@ $ gem install sass
 ```
 Then, in the main directory of the project :
 ```
-$ sass html/scss/main.scss html/style.css
+$ sass public/scss/main.scss public/css/style.css
 ```
 
 ## Server setup
@@ -76,4 +76,3 @@ perl6 wrap_bailador.pl
 cd ~/work/bailador.net/server
 perl6 wrap_todo.pl
 ```
-
