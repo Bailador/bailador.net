@@ -1,0 +1,12 @@
+% my (%h) = @_;
+<%= Template::Mojo.new(slurp "views/incl/header.html").render(%h); %>
+
+<div id="news">
+  <div class="news-item">
+     Version 0.04 was released to CPAN. This is the first version of Bailador that can be installed from CPAN.
+  </div>
+</div>
+
+
+<%= Template::Mojo.new(slurp "views/incl/footer.html").render(%h); %>
+
