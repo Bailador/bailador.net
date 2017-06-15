@@ -1,5 +1,6 @@
 % my (%h) = @_;
-<%= Template::Mojo.new(slurp "views/incl/header.html").render(%h); %>
+% use Bailador;
+<%= template("incl/header.html", %h); %>
 
 <div id="news">
   <div class="news-item">
@@ -8,5 +9,5 @@
 </div>
 
 
-<%= Template::Mojo.new(slurp "views/incl/footer.html").render(%h); %>
+<%= template("incl/footer.html", %h); %>
 
