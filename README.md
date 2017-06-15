@@ -76,3 +76,13 @@ perl6 wrap_bailador.pl
 cd ~/work/bailador.net/server
 perl6 wrap_todo.pl
 ```
+
+
+### Other
+
+```
+# apt-get install mailutils
+# apt-get install pandoc
+$ crontab server/crontab.txt
+```
+
