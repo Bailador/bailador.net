@@ -12,8 +12,7 @@ get '/documentation' => sub () {
     });
 };
 
-use lib 'lib';
-require BailadorGradual;
+require Bailador::Gradual;
 
 baile();
 
