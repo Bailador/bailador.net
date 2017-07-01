@@ -1,6 +1,6 @@
 /.sass-cache/
-/public/css/style.css
-/public/css/style.css.map
+/static/css/style.css
+/static/css/style.css.map
 *.swp
 .precomp/
 /tmp/

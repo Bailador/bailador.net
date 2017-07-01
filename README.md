@@ -8,7 +8,7 @@ $ gem install sass
 ```
 Then, in the main directory of the project :
 ```
-$ sass public/scss/main.scss public/css/style.css
+$ sass static/scss/main.scss static/css/style.css
 ```
 
 ## Server setup
