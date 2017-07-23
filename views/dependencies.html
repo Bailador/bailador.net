@@ -1,0 +1,14 @@
+% my (%h) = @_;
+% use Bailador;
+
+<%= template("incl/header.html", %h); %>
+
+
+<h1>Bailador Dependencies</h1>
+
+<ul id="deps">
+</ul>
+
+<script src='js/deps.js'></script>
+
+<%= template("incl/footer.html", %h); %>
