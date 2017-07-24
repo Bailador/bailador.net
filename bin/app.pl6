@@ -1,4 +1,5 @@
-use v6;
+use v6.c;
+
 use Bailador;
 use JSON::Fast;
 
@@ -11,6 +12,14 @@ get '/documentation' => sub () {
         code => $code,
     });
 };
+
+get '/dependencies' => sub {
+    return template "dependencies.html";
+};
+
+get '/deps' => sub {
+    redirect('/dependencies');
+}
 
 require Bailador::Gradual;
 
