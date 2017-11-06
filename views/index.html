@@ -3,11 +3,14 @@
 <%= template("incl/header.html", %h); %>
 
 
-<div id="title">
-
-    <img alt="Bailador Logo" src="img/bailador-blue-256.png">
+<div class="title-head">
     <h1>Bailador</h1>
     <h2>Web Application Development in Perl 6</h2>
+
+    <a class="waves-effect waves-light btn-large indigo" href="https://github.com/Bailador/Bailador#installation"><i class="material-icons right">arrow_forward</i>Get started with Bailador</a>
+</div>
+
+<!-- <div id="title">
 
 <p>
 Bailador is a light-weight, route-based, next-generation, fully buzzword compatible framework for web application development.
@@ -22,50 +25,45 @@ The goals of Bailador include:
 </ul>
 
 </div>
-
-<ul>
-  <li><a href="https://github.com/Bailador/Bailador">Source of Bailador</a></li>
-  <li><a href="https://github.com/Bailador/bailador.net">Source of Bailador website</a></li>
-</ul>
-
-<div id="code">
-    <pre><code class="language-perl">
-use Bailador;
-
-get '/' => sub {
-    "hello world"
-}
-
-baile;
-    </code></pre>
+-->
+<div class="community">
+    <div class="col s12 m6 right">
+      <div class="card indigo">
+        <div class="card-content white-text">
+          <span class="card-title">Community</span>
+          <p>The Bailador users and developers can be found on the Perl 6 Bailador Slack channel.</p>
+        </div>
+        <div class="card-action">
+          <a href="slack">Join us on Slack</a>
+          <a href="https://github.com/Bailador/">Join us on GitHub</a>
+        </div>
+      </div>
+    </div>
 </div>
 
-<div id="demo-applications">
-
-    <h2>Demo Applications</h2>
-
-    <ul>
-        <li><a href="http://todo.bailador.net/">TODO</a> <a href="https://github.com/szabgab/Bailador-TODO">Source</a></li>
-    </ul>
-
+<div class="examples">
+    <div class="col s12 m6 right">
+      <div class="card indigo">
+        <div class="card-content white-text">
+          <span class="card-title">Application Examples</span>
+          <p>perl 6 Maven + this code used to serve http://testers.p6c.org/ but currently not in use</p>
+        </div>
+        <div class="card-action">
+          <a href="#">All the Examples</a>
+          <a href="#">Add your application</a>
+        </div>
+      </div>
+    </div>
 </div>
 
-
-<div id="applications">
-
-    <h2>Applications examples</h2>
-
-    <ul>
-        <li><a href="http://perl6maven.com/">Perl 6 Maven</a> <a href="https://github.com/szabgab/Perl6-Maven">Source</a></li>
-        <li><a href="https://github.com/perl6/cpandatesters.perl6.org/">this code</a> used to serve http://testers.p6c.org/ but currently not in use</a></li>
-    </ul>
-
-</div>
-
-<div id="community">
-
-    <h2>Community</h2>
-    The Bailador users and developers can be found on the <a href="http://perl6-bailador.slack.com/">Perl 6 Bailador</a> Slack channel. Till we find a better way to have you join us, you'll need to send an e-mail to Gabor Szabo &lt;szabgab@gmail.com&gt; and ask him to send you an invitation.
+<div id="slack" class="modal">
+    <div class="modal-content">
+      <h4>Join us on Slack</h4>
+      <p>Send an e-mail to Gabor Szabo <szabgab@gmail.com> and ask him to send you an invitation.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    </div>
 </div>
 
 

@@ -1,35 +1,15 @@
-header {
-    position: fixed;
-    background-color: $base_color;
-    font-family: Calibri;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: $header_height;
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+.title-head {
+    h1 {
+        font-size: 50px;
     }
+    h2 {
+    font-size: 32px;
+    }
+    text-align: center;
 
-    li {
-        float: left;
-        a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-    }
-}
+    background-image: url('../img/bailador-blue-256.png'), url('../img/camelia-logo.png');
+    background-repeat: no-repeat;
+    background-position: top left, top right;
 
-#links {
-    float: right;
-    display: block;
-    list-style: none;
-    img {
-        width: 25px;
-    }
+    height: 250px;
 }
