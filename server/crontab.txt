@@ -1,5 +1,5 @@
 # Do not edit the crontab directly!
 # Load using:  crontab ~/work/bailador.net/server/crontab.txt
 
-42 * * * * (cd ~/work/Bailador; mkdir ../bailador.net/tmp; git pull; pandoc -f markdown_github -t html README.md > ../bailador.net/tmp/documentation.html)
+42 * * * * (cd ~/work/Bailador; [ -e ../bailador.net/tmp ] || mkdir ../bailador.net/tmp; git pull; pandoc -f markdown_github -t html README.md > ../bailador.net/tmp/documentation.html)
 
