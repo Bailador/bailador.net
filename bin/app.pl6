@@ -3,6 +3,9 @@ use v6.c;
 use Bailador;
 use JSON::Fast;
 
+# Bailador stops responding after a while. Let's try to restart ourselves
+Promise.in(60*60*1).then: { exit }
+
 my $root = $*PROGRAM.absolute.IO.dirname;
 $root = $root.IO.dirname;
 
