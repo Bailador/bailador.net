@@ -8,6 +8,7 @@ $ gem install sass
 ```
 Then, in the main directory of the project :
 ```
+$ mkdir static/css
 $ sass static/scss/main.scss static/css/style.css
 ```
 
@@ -25,17 +26,17 @@ As user `gabor`
 ```
 mkdir ~/work
 cd ~/work
-git clone https://github.com/Bailador/nailador.net.git
+git clone https://github.com/Bailador/bailador.net.git
 git clone https://github.com/szabgab/Bailador-TODO.git
 ```
 
 As user `root`
 
 ``
-apt-get install apache2
-apt-get install ruby ruby-sass
-cd /etc/apache2/sites-enabled
-ln -s /home/gabor/work/bailador.net/server/bailador.net.conf
+apt-get install -y apache2
+apt-get install -y ruby ruby-sass
+apt-get install -y build-essential
+ln -s /home/gabor/work/bailador.net/server/bailador.net.conf /etc/apache2/sites-enabled/bailador.net.conf
 
 a2enmod headers
 a2enmod proxy
@@ -45,11 +46,12 @@ service apache2 restart
 ```
 
 Download Rakudo Star from http://rakudo.org/ to /opt
+( http://rakudo.org/downloads/star/rakudo-star-latest.tar.gz could be used)
 ```
 cd /opt
-wget https://rakudo.perl6.org/downloads/star/rakudo-star-2017.04.tar.gz
-tar xzf rakudo-star-2017.04.tar.gz
-cd rakudo-star-2017.04
+wget https://rakudo.perl6.org/downloads/star/rakudo-star-2017.10.tar.gz
+tar xzf rakudo-star-2017.10.tar.gz
+cd rakudo-star-2017.10
 perl Configure.pl --backend=moar --gen-moar
 make
 make install
@@ -58,9 +60,15 @@ make install
 Add the following to the end of ~/.bashrc of both `root` and `gabor`:
 
 ```
-export PATH=$PATH:/opt/rakudo-star-2017.04/install/bin:/opt/rakudo-star-2017.04/install/share/perl6/site/bin
+export PATH=$PATH:/opt/rakudo-star-2017.10/install/bin:/opt/rakudo-star-2017.10/install/share/perl6/site/bin
 ```
 
+As user `root`
+
+```
+cd /home/gabor/work/bailador.net
+zef install --serial --force --deps-only .
+```
 
 ### Launch the web applications manually
 
