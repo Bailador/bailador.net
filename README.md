@@ -32,7 +32,7 @@ git clone https://github.com/szabgab/Bailador-TODO.git
 
 As user `root`
 
-``
+```
 apt-get install -y apache2
 apt-get install -y ruby ruby-sass
 apt-get install -y build-essential
@@ -93,4 +93,3 @@ perl6 wrap_todo.pl
 # apt-get install pandoc
 $ crontab server/crontab.txt
 ```
-
